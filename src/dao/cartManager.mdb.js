@@ -41,7 +41,7 @@ class CartMDBManager {
     };
     getCartById = async (cid) => {
         try {
-            let cartById = await this.model.findById(cid);
+            let cartById = await this.model.find({_id: cid});
             return cartById;
         } catch (error) {
             return "Lo sentimos, ha ocurrido un error enviando la información que intentó capturar."
